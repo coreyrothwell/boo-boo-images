@@ -4,7 +4,7 @@
 */
 ;(function($,window){
 	
-	$.fn.sizer = function(opts){
+	$.fn.booBooImages = function(opts){
 		
 		var settings = $.extend({
 			breakWidth: 480, 
