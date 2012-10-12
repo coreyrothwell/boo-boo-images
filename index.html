@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Easy jQuery Responsive Images</title>
+<meta name="viewport" content="width=device-width">
+<style>img{width:100%;display:block;margin:1em 0;}</style>
+</head>
+<body>
+
+<img src="_img/build.jpg" data-ri-big="_img/build-big.jpg" />
+<img src="_img/build.jpg" />
+<img src="_img/map.jpg" data-ri-big="_img/map_xl.jpg" />
+<img src="_img/map.jpg" />
+<img src="_img/forest.jpg" data-ri-big="_img/forest_xl.jpg" />
+<img src="_img/forest.jpg" />
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script src="_js/jquery.sizer.js"></script>
+
+<script>
+$(function(){
+	$('[data-ri-big]').sizer({
+		breakWidth: 480, // width to swap images
+		onWindowResize: true, // allow resizing
+		dataAttr: 'data-ri-big' //data attribute name for big version
+	});
+});
+</script>
+</body>
+</html>
